@@ -1,38 +1,102 @@
 .App {
-  text-align: center;
+    display: block;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Navigation {
+    display: inline-flex;
+    width: 100%;
+    background-color: #cc272c;
+    height: 6vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.SideAndGraph {
+    display: flex;
+    flex-direction: row;
+    height: 38vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.SideBar {
+    width: 15%;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 2px;
+    border-color: green;
 }
 
-.App-link {
-  color: #61dafb;
+.Graph {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+    position: relative;
+    width: 6vw;
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    margin-right: 9%;
+}
+
+.graph1 {
+    position: relative;
+    width: 10%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: purple;
+}
+
+.graph2 {
+    position: relative;
+    width: 10%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: indianred;
+}
+
+.Profile {
+    position: absolute;
+    right: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: teal;
+}
+
+
+/* .SideBarButton {
+    width: 100%;
+    height: 6vw;
+    display: inline;
+    background-color: aquamarine;
+    border-style: solid;
+    border-width: 2px;
+    border-color: crimson;
+} */
+
+.graphSelect {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.insideButton {
+    text-align: center;
+    width: 100%;
+    height: 6vw;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: aquamarine;
+}
+
+.textinside {
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.logoinside {
+    height: 4vw;
+    vertical-align: middle;
+    margin-right: 40px;
 }
