@@ -1,66 +1,87 @@
 .App {
-    display: block;
+    display: flex;
     flex-direction: column;
 }
 
+
+/* .App>div {
+    flex: 1;
+} */
+
 .Navigation {
     display: inline-flex;
+    top: 0;
     width: 100%;
     background-color: #cc272c;
     height: 6vw;
 }
 
+.top {
+    margin-top: 10px;
+}
+
 .SideAndGraph {
     display: flex;
     flex-direction: row;
-    height: 38vw;
+    height: calc(100vh - 6vw);
+    overflow: auto;
+    /* flex: 1 1 auto; */
 }
 
 .SideBar {
-    width: 15%;
+    width: 15vw;
     flex-direction: column;
-    border-style: solid;
-    border-width: 2px;
-    border-color: green;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-right: 1px solid #cc272c;
+}
+
+.SideBar::-webkit-scrollbar {
+    width: 0;
 }
 
 .Graph {
-    border-style: solid;
+    width: 100%;
+    /* border-style: solid;
     border-width: 2px;
-    border-color: black;
+    border-color: black; */
 }
 
 .logo {
     position: relative;
-    width: 6vw;
-    border-style: solid;
+    width: 4vw;
+    height: 4vw;
+    /* border-style: solid;
     border-width: 2px;
-    border-color: blue;
-    margin-right: 9%;
+    border-color: blue; */
+    margin-right: 8vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    cursor: pointer;
 }
 
 .graph1 {
     position: relative;
     width: 10%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: purple;
 }
 
 .graph2 {
     position: relative;
     width: 10%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: indianred;
+}
+
+.graph3 {
+    position: relative;
+    width: 3%;
 }
 
 .Profile {
-    position: absolute;
-    right: 0;
-    border-style: solid;
+    margin-left: auto;
+    margin-right: 2vw;
+    width: 4vw;
+    /* border-style: solid;
     border-width: 2px;
-    border-color: teal;
+    border-color: teal; */
 }
 
 
@@ -74,29 +95,145 @@
     border-color: crimson;
 } */
 
-.graphSelect {
+.graphButton {
     width: 100%;
+    height: 2vw;
+    font-size: 14px;
     position: absolute;
     bottom: 0;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    border-left: 1px solid #cc272c;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+    z-index: 3;
+}
+
+.second {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 2px solid #cc272c;
+    z-index: 2;
+    background-color: rgb(231, 231, 231);
+    margin-left: -5px;
+}
+
+.third {
+    /* border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 2px solid #cc272c; */
+    z-index: 1;
+    font-size: 24px;
+    background-color: #cc272c;
+    margin-left: -5px;
+    color: white;
 }
 
 .insideButton {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 6vw;
     cursor: pointer;
-    border-style: solid;
-    border-width: 2px;
-    border-color: aquamarine;
+    border: none;
+    background-color: white;
+    position: relative
+}
+
+.insideButton:hover,
+.insideButton.focus {
+    background-color: #cc272c;
+}
+
+.imageAndText {
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    position: relative;
+    width: 100%;
+    text-align: left;
 }
 
 .textinside {
-    vertical-align: middle;
+    position: absolute;
     font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    margin-top: calc((6vw - 14px)/2);
+    margin-left: 4vw;
+    margin-right: 0;
+}
+
+.wide {
+    margin-top: calc(((6vw - 14px)/2) - 10px);
 }
 
 .logoinside {
+    position: absolute;
+    margin: 1vw 0 1vw 0;
     height: 4vw;
-    vertical-align: middle;
-    margin-right: 40px;
+    width: 4vw;
+}
+
+.dropdownElements {
+    /* display: none; */
+    position: absolute;
+    flex-direction: column;
+    width: 18vw;
+    z-index: 1;
+    text-align: left;
+    margin-top: -6vw;
+    margin-left: 13vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: crimson;
+    border-radius: 0 5px 5px 0;
+}
+
+.listElement:hover,
+.liButton:hover,
+.liButton.focus {
+    background-color: #cc272c;
+}
+
+.dropdownElements2 {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: -6vw;
+    margin-left: 13vw;
+    border-style: solid;
+    border-width: 2px;
+    border-color: crimson;
+}
+
+.liButton {
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    height: 30px;
+    margin-bottom: 0;
+}
+
+.first {
+    border-radius: 0 4px 0 0;
+}
+
+.last {
+    border-radius: 0 0 4px 0;
+}
+
+.listElement {
+    list-style-type: none;
+    width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: left;
+    /* margin-left: 25px;
+    margin-right: 5px; */
 }
