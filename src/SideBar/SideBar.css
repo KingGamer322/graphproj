@@ -1,23 +1,5 @@
-.App {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* .App>div {
-    flex: 1;
-} */
-
 .top {
     margin-top: 10px;
-}
-
-.SideAndGraph {
-    display: flex;
-    flex-direction: row;
-    height: calc(100vh - 6vw);
-    overflow: auto;
-    /* flex: 1 1 auto; */
 }
 
 .SideBar {
@@ -31,24 +13,6 @@
 .SideBar::-webkit-scrollbar {
     width: 0;
 }
-
-.Graph {
-    width: 100%;
-    /* border-style: solid;
-    border-width: 2px;
-    border-color: black; */
-}
-
-
-/* .SideBarButton {
-    width: 100%;
-    height: 6vw;
-    display: inline;
-    background-color: aquamarine;
-    border-style: solid;
-    border-width: 2px;
-    border-color: crimson;
-} */
 
 .insideButton {
     display: flex;
@@ -96,7 +60,6 @@
 }
 
 .dropdownElements {
-    /* display: none; */
     position: absolute;
     flex-direction: column;
     width: 18vw;
@@ -114,17 +77,6 @@
 .liButton:hover,
 .liButton.focus {
     background-color: #cc272c;
-}
-
-.dropdownElements2 {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    margin-top: -6vw;
-    margin-left: 13vw;
-    border-style: solid;
-    border-width: 2px;
-    border-color: crimson;
 }
 
 .liButton {
